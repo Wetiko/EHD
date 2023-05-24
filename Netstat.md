@@ -173,6 +173,16 @@ Here's an list of `netstat` commands that includes descriptions:
     netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr
     ```
 
+35. will display all TCP and UDP connections in numeric format:
+    ```
+    netstat -tuna
+    ```
+
+35. To view what processes are using the ports:
+    ```
+    netstat -tunap
+    ```
+
 These are additional `netstat` commands that provide various insights into network connections, statistics, processes, and more. Remember to refer to the `netstat` manual or command documentation for more detailed information on the specific options and their usage for your operating system.
 
 # Examples
