@@ -45,3 +45,42 @@ Connecting to a Linux server anonymously typically refers to establishing a remo
      Once connected, provide the username "anonymous" and any email address as the password.
 
 Note: It's essential to ensure that you have explicit permission to connect anonymously to a server. Connecting to a server without authorization can be illegal and is considered unethical. Always adhere to appropriate security practices and follow the rules and guidelines set by the server administrators.
+
+
+# General Linux commands
+To find kali version or kali linux kernel version
+`cat /etc/os-release`
+`uname -a`
+
+To find ip address
+`ip addr`
+`ifconfig`
+
+To find gateway ip
+`ip route`
+
+To see dns server
+`cat /etc/resolv.conf`
+
+
+# checking apache version
+
+If you don't have direct access to the server, you can try to determine the Apache version with this:
+
+1. Check the HTTP response headers: You can use the `curl` command to send a request to the server and inspect the response headers. The `-I` option is used to fetch only the headers. Run the following command:
+
+   ```
+   curl -I http://server-ip-address/
+   ```
+
+   Look for the "Server" header in the response. It usually includes the Apache version information.
+
+   Example output:
+   ```
+   HTTP/1.1 200 OK
+   Date: Wed, 15 Jun 2022 10:00:00 GMT
+   Server: Apache/2.4.41 (Ubuntu)
+   ...
+   ```
+
+   In this example, the Apache version is 2.4.41.
